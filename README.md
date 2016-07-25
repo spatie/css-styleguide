@@ -327,7 +327,7 @@ class="h-text-ellipsis"
 - Use `js-hook` to initiate handlers
 - `js-class`comes first
 - Use `data-attributes` only for data storage or configuration storage
-- Has no effect on styling 
+- Has no effect on styling whatsoever
 
 
 ## Code Style Tools
