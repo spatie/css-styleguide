@@ -240,11 +240,11 @@ class="person"
 
 ```scss
 .button--delete {
-        @extends .button;
-
-        background-color: red; 
-        color: white;
-        text-transform: uppercase;
+    @extend .button;
+    
+    background-color: red; 
+    color: white;
+    text-transform: uppercase;
 }
 ```
 
