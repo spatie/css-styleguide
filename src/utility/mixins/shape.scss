@@ -10,6 +10,16 @@
     width: $size;
 }
 
+@mixin shape-rectangle($aspect-ratio, $display: inline-block, $color: transparent) {
+    background-color: $color;
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: $aspect-ratio;
+    width: 100%;
+}
+
 @mixin shape-square($size, $display: inline-block, $color: transparent) {
     background-color: $color;
     content: '';
@@ -19,16 +29,6 @@
     overflow: hidden;
     text-align: center;
     width: $size;
-}
-
-@mixin shape-rectangle($aspect-ratio, $display: inline-block, $color: transparent) {
-    background-color: $color;
-    content: '';
-    display: block;
-    height: 0;
-    overflow: hidden;
-    padding-bottom: $aspect-ratio;
-    width: 100%;
 }
 
 @mixin shape-triangle-down($size, $display: inline-block, $color: transparent) {
