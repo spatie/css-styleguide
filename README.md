@@ -155,32 +155,32 @@ Alternatively:
 - All is class, except for standard html tags that are out of control eg. the output of an editor, or external component
 - Avoid multiple components on 1 DOM-element
 ```html
-   <!-- Try to avoid --> 
-   <div class="grid__col -half news">...
-   
-   <!-- More flexible, readable & moveable -->
-   <div class="grid__col -half">
-        <article class="news">...
+<!-- Try to avoid --> 
+<div class="grid__col -half news">...
+
+<!-- More flexible, readable & moveable -->
+<div class="grid__col -half">
+    <article class="news">...
 
 ```
 - Block tags are interchangeable since styling is done by class
 ```html
-    <!-- All the same -->
-    <div class="article">
-    <section class="article">
-    <article class="article">
+<!-- All the same -->
+<div class="article">
+<section class="article">
+<article class="article">
 ```
 
 ### Class order
 
 ```html
-   <div class="js-hook block__element -modifier h-helper is-state has-something">
+<div class="js-hook block__element -modifier h-helper is-state has-something">
 ```
 
 Visual class grouping can be done with `... | ...`.
 
 ```html
-   <div class="js-masonry | news__item -blue -small | h-hidden is-active has-html">
+<div class="js-masonry | news__item -blue -small | h-hidden is-active has-html">
 ```
 
 
@@ -194,23 +194,23 @@ Visual class grouping can be done with `... | ...`.
 - All lowercase, can contain `-` in name.
 
 ```html
-    class="news"
-    class="news__item"
-    class="news__item__publish-date"
+class="news"
+class="news__item"
+class="news__item__publish-date"
 ```     
 
 - Use descriptive language. Consider `class="team__member"` instead of `class="team__item"`
 
 ```html
-    class="team"
-    class="team__member"
+class="team"
+class="team__member"
 ```   
 
 - You can use plurals & singular for readability. Consider `class="person"` instead of `class="persons_person"`
 
 ```html
-    class="persons"
-    class="person"
+class="persons"
+class="person"
 ```   
 
 
@@ -219,10 +219,10 @@ Visual class grouping can be done with `... | ...`.
 `class="button -small"`
 
 ```scss
-    .button {
-        &.-rounded {
-            ...
-        }
+.button {
+    &.-rounded {
+        ...
+    }
 ```
 
 - Defined in `components/*.scss` or `patterns/*.scss`
@@ -239,13 +239,13 @@ Visual class grouping can be done with `... | ...`.
 `class="button--delete"`
 
 ```scss
-    .button--delete {
-            @extends .button;
+.button--delete {
+        @extends .button;
 
-            background-color: red; 
-            color: white;
-            text-transform: uppercase;
-    }
+        background-color: red; 
+        color: white;
+        text-transform: uppercase;
+}
 ```
 
 - Defined in `components/*.scss`, `patterns/*.scss`
@@ -258,8 +258,8 @@ Visual class grouping can be done with `... | ...`.
 ## View blocks
 
 ```html
-    class="v-auth"
-    class="v-auth__form"
+class="v-auth"
+class="v-auth__form"
 ```
 
 - Defined in `views/_auth.scss`
@@ -273,9 +273,9 @@ Visual class grouping can be done with `... | ...`.
 `class="h-align-right"`
 
 ```html
-    class="h-align-right"
-    class="h-visibility-hidden"
-    class="h-text-ellipsis"
+class="h-align-right"
+class="h-visibility-hidden"
+class="h-text-ellipsis"
 ```
 
 - Eg. defined in `helpers/_align.scss`
@@ -289,9 +289,9 @@ Visual class grouping can be done with `... | ...`.
 `class="is-loaded"`
 
 ```scss
-    &.is-loaded {
-        ...
-    }
+&.is-loaded {
+    ...
+}
 ```
 
 - Classes added by server or client
@@ -303,11 +303,11 @@ Visual class grouping can be done with `... | ...`.
 `class="article has-html"`
 
 ```scss
-    &.has-html {
-        h1 {
-            ...
-        }
+&.has-html {
+    h1 {
+        ...
     }
+}
 ```
 
 - Explicit class indicates special status of this node's tree
@@ -318,10 +318,10 @@ Visual class grouping can be done with `... | ...`.
 ### Script identifiers
 
 ```html
-    <div class="js-map ..."
-         data-map-icon="url.png"
-         data-map-lat="4.56"
-         data-map-lon="1.23">
+<div class="js-map ..."
+     data-map-icon="url.png"
+     data-map-lat="4.56"
+     data-map-lon="1.23">
 ```
 
 - Use `js-hook` to initiate handlers
