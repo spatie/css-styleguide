@@ -1,0 +1,14 @@
+.article {
+    padding: gutter(s) 0;
+
+    &.has-html {
+        h1 {
+            margin-bottom: .5em;
+        }
+
+        p {
+            font-size: font-size(m);
+            margin-bottom: 1em;
+        }
+    }
+}

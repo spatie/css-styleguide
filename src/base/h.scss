@@ -1,0 +1,30 @@
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    @include font-sans-bold;
+    @include font-size(xxl);
+}
+
+h2 {
+    @include font-sans-bold;
+    @include font-size(l);
+}
+
+h3 {
+    @include font-sans;
+
+    margin-bottom: .5rem;
+    word-break: break-word;
+}
+
+h4 {
+    @include font-sans;
+
+    margin: 0;
+}

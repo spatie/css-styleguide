@@ -1,0 +1,7 @@
+a {
+    @include text-underline(color($link));
+
+    &:hover {
+        @include text-underline(color($link, hover));
+    }
+}
