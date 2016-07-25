@@ -30,7 +30,7 @@ Alternatively:
 |  |-- functions
 |  |   `--colors.scss
 |  |   `--maps.scss
-|      `--...
+|  |   `--...
 |  `-- mixins
 |      |--background.scss
 |      |--block.scss
@@ -48,11 +48,9 @@ Alternatively:
 |  `-- ...
 |-- components
 |  |-- alert.scss: .alert, .alert--success, .alert.-small
-|  |-- button.scss: .button, .button--delete, .button.-large
 |  `-- ...
 |-- patterns
 |  |-- footer.scss: .footer, .footer__colofon
-|  |-- form.scss: .form, .form__fieldset
 |  `-- ...
 |-- helpers
 |  |-- align.scss: .h-align-left
