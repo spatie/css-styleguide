@@ -5,21 +5,21 @@ This is the CSS structure and style guide we use at spatie.be in our front end s
 ## BEVM syntax
 
 ```
-.js-hook                    : script hook (`$('.js-hook')`) — not used for styling
+.js-hook                    : script hook, not used for styling
 
 .block                      : parent    
 .block__element             : child 
 .block__element__element    : grandchild 
 .block__element--variation  : standalone variation
 
-Alternatively:
+Shorthand if possible:
 .items                      : block
 .item                       : child
 
 .-modifier                  : property modifier
 .is-changed                 : state change by server or client
 .h-type-value               : generic helper grouped by type (eg. `h-align`, `h-margin`)
-.has-something              : item styling has impact on children
+.has-something              : parent class nests styling for children (eg. text editor output)
 
 ```
 
@@ -93,55 +93,55 @@ Alternatively:
 
 /* Comment */
 
-.block {                             // Indent 4, Space before bracket                                   
+.block {                             // Indent 2, Space before bracket                                   
   
-    @include ...;                   //  @includes 
-           
-    a-property: value;              // Props sorted automatically by linter
-    b-property: value; 
-    c-property: .45em;              // No leading zero's
-    
-    &:hover {                       // Pseudo class
-        ...
-    }
-    
-    &:before,                       // Pseudo-elements
-    &:after {                       // Each on a line
-        ...
-    }
-    
-    &.-modifier {
-        ...                         // Limit props or create variation
-    }
-    
-    /* Comment to group modifiers */
-    
-    &.-modifier2 {
-        ...                        // Limit props or create variation
-    }
-    
-    
-    /* Try to avoid */
-    
-    @extend ...;                   // See eg. https://www.sitepoint.com/avoid-sass-extend/
-    
-    &_subclass {                   // Unreadable and not searchable
-    
-    }
-                  
-    h1 {                           // Try to avoid and be more specific eg. block__title
-        ...
-    }
-        
+  @include ...;                   //  @includes 
+         
+  a-property: value;              // Props sorted automatically by linter
+  b-property: value; 
+  c-property: .45em;              // No leading zero's
+  
+  &:hover {                       // Pseudo class
+      ...
+  }
+  
+  &:before,                       // Pseudo-elements
+  &:after {                       // Each on a line
+      ...
+  }
+  
+  &.-modifier {
+      ...                         // Limit props or create variation
+  }
+  
+  /* Comment to group modifiers */
+  
+  &.-modifier2 {
+      ...                        // Limit props or create variation
+  }
+  
+  
+  /* Try to avoid */
+  
+  @extend ...;                   // See eg. https://www.sitepoint.com/avoid-sass-extend/
+  
+  &_subclass {                   // Unreadable and not searchable
+  
+  }
+                
+  h1 {                           // Try to avoid and be more specific eg. block__title
+      ...
+  }
+      
 }
                                    // Line between blocks;
 .block--variation {                // A block with few extra modifications often used together
-    @extend .block;                // Good use for @extend 
-    ...
+  @extend .block;                // Good use for @extend 
+  ...
 }
     
 .block__element {                  // Separate class for readability, searchability
-    ...
+  ...
 }
 
 
@@ -220,9 +220,9 @@ class="person"
 
 ```scss
 .button {
-    &.-rounded {
-        ...
-    }
+  &.-rounded {
+      ...
+  }
 ```
 
 - Defined in `components/*.scss` or `patterns/*.scss`
@@ -240,11 +240,11 @@ class="person"
 
 ```scss
 .button--delete {
-    @extend .button;
-    
-    background-color: red; 
-    color: white;
-    text-transform: uppercase;
+  @extend .button;
+  
+  background-color: red; 
+  color: white;
+  text-transform: uppercase;
 }
 ```
 
@@ -290,7 +290,7 @@ class="h-text-ellipsis"
 
 ```scss
 &.is-loaded {
-    ...
+  ...
 }
 ```
 
@@ -298,15 +298,15 @@ class="h-text-ellipsis"
 - For state indication, interaction, animation start/stop 
 
 
-### Tree classes
+### Parent classes
 
 `class="article has-html"`
 
 ```scss
 &.has-html {
-    h1 {
-        ...
-    }
+  h1 {
+      ...
+  }
 }
 ```
 
@@ -324,8 +324,8 @@ class="h-text-ellipsis"
      data-map-lon="1.23">
 ```
 
-- Use `js-hook` to initiate handlers
-- `js-class`comes first
+- Use `js-hook` to initiate handlers like `document.getElementsByClassName('js-hook')`
+- `js-hook`comes first
 - Use `data-attributes` only for data storage or configuration storage
 - Has no effect on styling whatsoever
 
