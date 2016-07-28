@@ -93,55 +93,55 @@ Shorthand if possible:
 
 /* Comment */
 
-.block {                             // Indent 2, Space before bracket                                   
-  
-  @include ...;                   //  @includes 
+.block {                             // Indent 4 spaces, space before bracket                                   
+    
+    @include ...;                   //  @includes 
          
-  a-property: value;              // Props sorted automatically by linter
-  b-property: value; 
-  c-property: .45em;              // No leading zero's
-  
-  &:hover {                       // Pseudo class
+    a-property: value;              // Props sorted automatically by linter
+    b-property: value; 
+    c-property: .45em;              // No leading zero's
+    
+    &:hover {                       // Pseudo class
       ...
-  }
-  
-  &:before,                       // Pseudo-elements
-  &:after {                       // Each on a line
+    }
+    
+    &:before,                       // Pseudo-elements
+    &:after {                       // Each on a line
       ...
-  }
-  
-  &.-modifier {
+    }
+    
+    &.-modifier {
       ...                         // Limit props or create variation
-  }
-  
-  /* Comment to group modifiers */
-  
-  &.-modifier2 {
+    }
+    
+    /* Comment to group modifiers */
+    
+    &.-modifier2 {
       ...                        // Limit props or create variation
-  }
-  
-  
-  /* Try to avoid */
-  
-  @extend ...;                   // See eg. https://www.sitepoint.com/avoid-sass-extend/
-  
-  &_subclass {                   // Unreadable and not searchable
-  
-  }
+    }
+    
+    
+    /* Try to avoid */
+    
+    @extend ...;                   // See eg. https://www.sitepoint.com/avoid-sass-extend/
+    
+    &_subclass {                   // Unreadable and not searchable
+    
+    }
                 
-  h1 {                           // Try to avoid and be more specific eg. block__title
+    h1 {                           // Try to avoid and be more specific eg. block__title
       ...
-  }
+    }
       
 }
                                    // Line between blocks;
 .block--variation {                // A block with few extra modifications often used together
-  @extend .block;                // Good use for @extend 
-  ...
+    @extend .block;                // Good use for @extend 
+    ...
 }
     
 .block__element {                  // Separate class for readability, searchability
-  ...
+    ...
 }
 
 
@@ -220,9 +220,9 @@ class="person"
 
 ```scss
 .button {
-  &.-rounded {
+    &.-rounded {
       ...
-  }
+    }
 ```
 
 - Defined in `components/*.scss` or `patterns/*.scss`
@@ -240,11 +240,11 @@ class="person"
 
 ```scss
 .button--delete {
-  @extend .button;
-  
-  background-color: red; 
-  color: white;
-  text-transform: uppercase;
+    @extend .button;
+    
+    background-color: red; 
+    color: white;
+    text-transform: uppercase;
 }
 ```
 
@@ -290,7 +290,7 @@ class="h-text-ellipsis"
 
 ```scss
 &.is-loaded {
-  ...
+    ...
 }
 ```
 
@@ -304,9 +304,9 @@ class="h-text-ellipsis"
 
 ```scss
 &.has-html {
-  h1 {
+    h1 {
       ...
-  }
+    }
 }
 ```
 
