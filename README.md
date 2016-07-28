@@ -332,6 +332,6 @@ class="h-text-ellipsis"
 
 ## Code Style Tools
 
-- Install cscomb via `npm i csscomb -g` 
+- Install cscomb globally via `npm i csscomb -g` 
 - Put a `.csscomb.json` in root dir of your project
 - Run `csscomb resources`
