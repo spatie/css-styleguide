@@ -34,6 +34,14 @@
     @return rgba(mapping($color, black), $opacity);
 }
 
+@function link-color($key: 'default', $opacity: 1) {
+    @return rgba(mapping($link-color, $key), $opacity);
+}
+
+@function social-color($key: 'twitter', $opacity: 1) {
+    @return rgba(mapping($social-color, $key), $opacity);
+}
+
 @function text-color($opacity: 1) {
     @return rgba(mapping($color, text), $opacity);
 }
