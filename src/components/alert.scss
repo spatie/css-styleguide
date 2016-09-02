@@ -1,5 +1,6 @@
 .alert {
   padding: 1em;
+  margin: 1em;
 
   &:empty {
     padding: 0;
@@ -54,7 +55,7 @@
   }
 }
 
-.alert--fixed {
+.alerts--fixed {
   left: 0;
   position: fixed;
   text-align: center;
