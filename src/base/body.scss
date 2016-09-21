@@ -1,5 +1,5 @@
 body {
-    @include font-sans;
+    @include font-system;
     @include text-antialiasing(subpixel);
 
     line-height: line-height();

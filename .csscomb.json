@@ -62,6 +62,7 @@
             "flex-shrink",
             "align-content",
             "align-items",
+            "justify-content",
             "position",
             "top",
             "right",
@@ -159,10 +160,6 @@
             "text-align",
             "text-align-last",
             "text-decoration",
-            "text-emphasis",
-            "text-emphasis-color",
-            "text-emphasis-style",
-            "text-emphasis-position",
             "text-indent",
             "text-justify",
             "text-outline",
@@ -216,6 +213,7 @@
             "..."
         ],
         [
+            "$include form-placeholder",
             "$include mq",
             "$include mq-below",
             "$include mq-above"
