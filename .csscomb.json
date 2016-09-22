@@ -1,7 +1,7 @@
 {
     "exclude": [
         "node_modules/**",
-        "src/utility/**"
+        "resources/assets/sass/front/utility/**"
     ],
     "always-semicolon": true,
     "block-indent": "    ",
@@ -24,7 +24,7 @@
     "space-between-declarations": "\n",
     "strip-spaces": true,
     "unitless-zero": true,
-    "vendor-prefix-align": true,
+    "vendor-prefix-align": false,
     "sort-order-fallback": "abc",
     "sort-order": [
         [
@@ -56,10 +56,19 @@
             "flex",
             "flex-align",
             "flex-direction",
+            "-webkit-box-flex",
+            "-ms-flex-positive",
             "flex-grow",
             "flex-order",
+            "-ms-flex-pack",
+            "-webkit-box-pack",
             "flex-pack",
+            "-ms-flex-negative",
             "flex-shrink",
+            "-ms-flex-wrap",
+            "flex-wrap",
+            "-webkit-box-align",
+            "-ms-flex-align",
             "align-content",
             "align-items",
             "justify-content",
@@ -183,8 +192,10 @@
             "animation-name",
             "animation-play-state",
             "animation-timing-function",
+            "-webkit-transform",
             "transform",
             "transform-origin",
+            "-webkit-transition",
             "transition",
             "transition-delay",
             "transition-duration",
