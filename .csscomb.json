@@ -1,7 +1,6 @@
 {
     "exclude": [
-        "node_modules/**",
-        "resources/assets/sass/front/utility/**"
+        "node_modules/**"
     ],
     "always-semicolon": true,
     "block-indent": "    ",
@@ -184,6 +183,14 @@
             "word-wrap"
         ],
         [
+            "counter-increment",
+            "counter-reset",
+            "list-style",
+            "list-style-image",
+            "list-style-position",
+            "list-style-type"
+        ],
+        [
             "animation",
             "animation-delay",
             "animation-direction",
@@ -201,14 +208,6 @@
             "transition-duration",
             "transition-property",
             "transition-timing-function"
-        ],
-        [
-            "counter-increment",
-            "counter-reset",
-            "list-style",
-            "list-style-image",
-            "list-style-position",
-            "list-style-type"
         ],
         [
             "cursor",
