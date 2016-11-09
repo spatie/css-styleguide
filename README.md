@@ -148,7 +148,7 @@ class="person"
 - Defined in `components/*.scss` or `patterns/*.scss`
 - A variation adds a few properties to a block, and acts as a shorthand for multiple modifiers
 - It's used stand-alone without the need to use the base class `button`
-- It's a logical case to use `@extend` here
+- It's a logical case to use `@extend` here, so the variation can inherit the original modifiers
 
 
 ### .v-block
@@ -178,7 +178,7 @@ class="v-auth__form"
 
 - Defined in `components/*.scss` or `patterns/*.scss`
 - A modifier changes one basic properties of a block, or adds a property
-- Modifiers are **always tied** to a component or block
+- Modifiers are **always tied** to a component or block, don't work on their own
 - Make it generic and reusable if possible: `class="team -large"` is better than `class="team -management"`
 - Multiple modifiers are possible. Each modifier is responsible for a property: `class="alert -success -rounded -large"`
 - The order in html or css should therefore not matter
@@ -268,7 +268,7 @@ class="h-text-ellipsis"
     
     /* Try to avoid */
     
-    @extend ...;                   // See eg. https://www.sitepoint.com/avoid-sass-extend/
+    @extend ...;                   // Use only for variations. See eg. https://www.sitepoint.com/avoid-sass-extend/
     
     &_subclass {                   // Unreadable and not searchable
     
@@ -299,7 +299,7 @@ We typically use 8 folders and a main `app.scss` file:
 
 ```
 |-- base            : basic html elements
-|-- components      : single components like 'alerts'
+|-- components      : single components
 |-- helpers         : helper classes
 |-- patterns        : more complex components with parent/child relations
 |-- settings        : variables
@@ -377,18 +377,16 @@ Excerpt from `alert.scss`:
     
     ...
 
-    &.-success {
-        ...
-    }
-
-    &.-warning {
-        ...
-    }
-
-    &.-danger {
+    &.-small {
         ...
     }
 }
+
+.alert--success {
+    @extend .alert;
+    ...
+}
+
 ```
 
 
