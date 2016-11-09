@@ -54,24 +54,24 @@ Html tags that are out of control (eg. the output of an editor) are scoped by th
 
 We follow a BEVM syntax with custom accents.
 
-```
-.js-hook                     : script hook, not used for styling
+```scss
+.js-hook                     // script hook, not used for styling
 
-.block                       : parent block   
-.block__element              : child block
-.block__element__element     : grandchild 
+.block                       // parent block   
+.block__element              // child block
+.block__element__element     // grandchild 
 // Shorthand if possible
-.items                       : parent block
-.item                        : child block
+.items                       // parent block
+.item                        // child block
 
-.block(__element)--variation : standalone variation of a block
-.v-block                     : block only used in specific view
+.block(__element)--variation // standalone variation of a block
+.v-block                     // block only used in specific view
 
-.-modifier                   : single property modifier
+.-modifier                   // single property modifier
 
-.h-type-value                : generic helper grouped by type (eg. `h-align`, `h-margin`)
-.is-state                    : state change by server or client
-.has-something               : parent class nests styling for children (eg. text editor output)
+.h-type-value                // generic helper grouped by type (eg. `h-align`, `h-margin`)
+.is-state                    // state change by server or client
+.has-something               // parent class nests styling for children (eg. text editor output)
 
 ```
 
