@@ -33,7 +33,7 @@ Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all
 </div>   
 ```
 
-Block tags are interchangeable since styling is done by class
+Block tags are interchangeable since styling is done by class:
 ```html
 <!-- All the same -->
 <div class="article">
@@ -41,7 +41,7 @@ Block tags are interchangeable since styling is done by class
 <article class="article">
 ```
 
-Html tags that are out of control (eg. the output of an editor) are scoped by the parent
+Html tags that are out of control (eg. the output of an editor) are scoped by the parent:
 ```html
 <div class="article has-html">
     <!-- custom html output -->
@@ -60,7 +60,7 @@ We follow a BEVM syntax with custom accents.
 .block                       : parent block   
 .block__element              : child block
 .block__element__element     : grandchild 
-Shorthand if possible:
+// Shorthand if possible
 .items                       : parent block
 .item                        : child block
 
@@ -107,7 +107,7 @@ Visual class grouping can be done with `... | ...`:
 - Defined in `components/*.scss`, `patterns/*.scss` or `views/*.scss`
 - A single reusable component, patterns or view specific block 
 - Children are separated with `__`
-- All lowercase, can contain `-` in name.
+- All lowercase, can contain `-` in name
 
 ```html
 class="news"
@@ -115,14 +115,14 @@ class="news__item"
 class="news__item__publish-date"
 ```     
 
-- Use descriptive language. Consider `class="team__member"` instead of `class="team__item"`
+- Use descriptive language. Consider `class="team__member"` instead of `class="team__item"`:
 
 ```html
 class="team"
 class="team__member"
 ```   
 
-- You can use plurals & singular for readability. Consider `class="person"` instead of `class="persons_person"`
+- You can use plurals & singulars for readability. Consider `class="person"` instead of `class="persons_person"`:
 
 ```html
 class="persons"
@@ -157,7 +157,7 @@ class="v-auth__form"
 ```
 
 - Defined in `views/*.scss`
-- A special component that is not reusable, but tied to a specific view.
+- A special component that is not reusable, but tied to a specific view
 - Mostly exceptions and one-time styling
 - Use sparsely, try to think in more generic components
 
@@ -176,7 +176,7 @@ class="v-auth__form"
 
 - Defined in `components/*.scss` or `patterns/*.scss`
 - A modifier changes one basic properties of a block, or adds a property
-- Modifiers are **always tied** to a component or block.
+- Modifiers are **always tied** to a component or block
 - Make it generic and reusable if possible: `class="team -large"` is better than `class="team -management"`
 - Multiple modifiers are possible. Each modifier is responsible for a property: `class="alert -success -rounded -large"`
 - The order in html or css should therefore not matter
@@ -193,8 +193,8 @@ class="h-text-ellipsis"
 ```
 
 - Eg. defined in `helpers/*.scss`
-- Reusable properties throughout the entire project.
-- Prefixed by type (= the property that will be effected).
+- Reusable properties throughout the entire project
+- Prefixed by type (= the property that will be effected)
 - Each helper class is responsible for a well-defined set of properties
 
 
@@ -293,7 +293,7 @@ class="h-text-ellipsis"
 
 ## File structure
 
-We typically use 8 folders and a main `app.scss` file
+We typically use 8 folders and a main `app.scss` file:
 
 ```
 |-- base            : basic html elements
@@ -313,8 +313,8 @@ We typically use 8 folders and a main `app.scss` file
 
 ### App.scss
 
-- Source order shouldn't matter, except for order of folders: import npm libraries, settings and utilities first.
-- Import is done by glob pattern so files can be moved easily from eg. components to patterns:
+- Source order shouldn't matter, except for order of folders: import npm libraries, settings and utilities first
+- Import is done by glob pattern so files can be moved easily from eg. components to patterns
  
 ```scss
 @import 'settings/**/*';
@@ -342,7 +342,7 @@ Contains sensible defaults for basic html elements. Example files and classes:
 
 ```
 
-Example file `*.scss`
+Example file `*.scss`:
 
 ```scss
 * {
@@ -368,7 +368,7 @@ Stand-alone reusable components with modifiers and variations.
 
 ```
 
-Excerpt from `alert.scss`
+Excerpt from `alert.scss`:
 
 ```scss
 .alert {
@@ -402,7 +402,7 @@ Stand-alone reusable components with modifiers and variations.
 
 ```
 
-Excerpt from `margin.scss`
+Excerpt from `margin.scss`:
 
 ```scss
 .h-margin {
@@ -434,7 +434,7 @@ More complex reusable patterns with parent/child relations, modifiers and variat
 
 ```
 
-Excerpt from `grid.scss`
+Excerpt from `grid.scss`:
 
 ```scss
 .grid {
@@ -469,7 +469,7 @@ Settings for colors, breakpoints, typography. etc.
 
 ```
 
-Excerpt from `color.scss`
+Excerpt from `color.scss`:
 
 ```scss
 $blue: (
@@ -500,7 +500,7 @@ SCSS common mixins and functions.
 
 ```
 
-Excerpt from `functions/color.scss`
+Excerpt from `functions/color.scss`:
 
 ```scss
 @function blue($key: default, $opacity: 1) {
@@ -516,7 +516,7 @@ Excerpt from `functions/color.scss`
 }
 ```
 
-Excerpt from `mixins/block.scss`
+Excerpt from `mixins/block.scss`:
 
 ```scss
 @mixin block-reset {
@@ -538,7 +538,7 @@ Excerpt from `mixins/block.scss`
 
 ### Vendor folder
 
-Imported and customized SCSS from 3rd party components. This is the syntactical wild west.
+Imported and customized SCSS from 3rd party components (this is the syntactical Wild West).
 
 ```
 |-- fancybox.scss
@@ -558,7 +558,7 @@ Non-reusable CSS rules tied to specific views. Consider this the exception, and 
 
 ```
 
-Excerpt from `auth.scss`
+Excerpt from `auth.scss`:
 
 ```scss
 .v-auth{
