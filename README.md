@@ -5,21 +5,14 @@ We currently use SCSS, but principles are useable for other pre/postprocessors.
 
 Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
 
-- [Code Style](#html)
-- [Tools](#tools)
-- [Inspiration](#inpiration)
-
-
-
-## Code Style
-
 - [HTML](#html)
 - [CSS classes](#css-classes)
 - [SCSS syntax](#scss-syntax)
 - [File structure](#file-structure)
+- [Tools](#tools)
+- [Inspiration](#inspiration)
 
-
-### HTML 
+## HTML 
 
 - All styling is done by classes
 - Make elements easily reusable, moveable in a project, or between projects
@@ -57,7 +50,7 @@ Html tags that are out of control (eg. the output of an editor) are scoped by th
 
 
 
-### CSS classes
+## CSS classes
 
 We follow a BEVM syntax with custom accents.
 
@@ -94,7 +87,7 @@ Visual class grouping can be done with `... | ...`.
 <div class="js-masonry | news__item -blue -small | h-hidden is-active has-html">
 ```
 
-#### .js-hook
+### .js-hook
 
 ```html
 <div class="js-map ..."
@@ -107,7 +100,7 @@ Visual class grouping can be done with `... | ...`.
 - Use `data-attributes` only for data storage or configuration storage
 - Has no effect on styling whatsoever
 
-#### .blocks and .block__elements
+### .blocks and .block__elements
 
 `class="news"`
 
@@ -136,7 +129,7 @@ class="persons"
 class="person"
 ```   
 
-#### .block--variation
+### .block--variation
 
 `class="button--delete"`
 
@@ -156,7 +149,7 @@ class="person"
 - It's a logical case to use `@extend` here
 
 
-#### .v-block
+### .v-block
 
 ```html
 class="v-auth"
@@ -170,7 +163,7 @@ class="v-auth__form"
 
 
 
-#### .-modifier
+### .-modifier
 
 `class="button -rounded"`
 
@@ -189,7 +182,7 @@ class="v-auth__form"
 - The order in html or css should therefore not matter
 
 
-#### .h-type-value
+### .h-type-value
 
 `class="h-align-right"`
 
@@ -205,7 +198,7 @@ class="h-text-ellipsis"
 - Each helper class is responsible for a well-defined set of properties
 
 
-#### .is-state
+### .is-state
 
 `class="is-loaded"`
 
@@ -220,7 +213,7 @@ class="h-text-ellipsis"
 - For state indication, interaction, animation start/stop 
 
 
-#### .has-something
+### .has-something
 
 `class="article has-html"`
 
@@ -239,7 +232,7 @@ class="h-text-ellipsis"
 
 
 
-### Scss syntax 
+## Scss syntax 
  
 ```scss
 
@@ -298,7 +291,7 @@ class="h-text-ellipsis"
 ```
 
 
-### File structure
+## File structure
 
 We typically use 8 folders and a main `app.scss` file
 
@@ -318,7 +311,7 @@ We typically use 8 folders and a main `app.scss` file
 ```
 
 
-#### App.scss
+### App.scss
 
 - Source order shouldn't matter, except for order of folders: import npm libraries, settings and utilities first.
 - Import is done by glob pattern so files can be moved easily from eg. components to patterns:
@@ -335,7 +328,7 @@ We typically use 8 folders and a main `app.scss` file
 @import 'views/**/*'; 
 ```
 
-#### Base folder
+### Base folder
 
 Contains sensible defaults for basic html elements. Example files and classes:
 
@@ -364,7 +357,7 @@ Example file `*.scss`
 ```
 
 
-#### Components folder
+### Components folder
 
 Stand-alone reusable components with modifiers and variations.
 
@@ -397,7 +390,7 @@ Excerpt from `alert.scss`
 ```
 
 
-#### Helpers folder
+### Helpers folder
 
 Stand-alone reusable components with modifiers and variations.
 
@@ -430,7 +423,7 @@ Excerpt from `margin.scss`
 ```
 
 
-#### Patterns folder
+### Patterns folder
 
 More complex reusable patterns with parent/child relations, modifiers and variations.
 
@@ -464,7 +457,7 @@ Excerpt from `grid.scss`
 }
 ```
 
-#### Settings folder
+### Settings folder
 
 Settings for colors, breakpoints, typography. etc.
 
@@ -491,7 +484,7 @@ $blue: (
 ```
 
 
-#### Utility folder
+### Utility folder
 
 SCSS common mixins and functions.
 
@@ -543,7 +536,7 @@ Excerpt from `mixins/block.scss`
 }
 ```
 
-#### Vendor folder
+### Vendor folder
 
 Imported and customized SCSS from 3rd party components. This is the syntactical wild west.
 
@@ -554,7 +547,7 @@ Imported and customized SCSS from 3rd party components. This is the syntactical 
 
 ```
 
-#### View folder
+### View folder
 
 Non-reusable CSS rules tied to specific views. Consider this the exception, and try to keep this folder empty. 
 
