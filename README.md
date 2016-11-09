@@ -40,7 +40,7 @@ Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all
 </div>   
 ```
 
-- Block tags are interchangeable since styling is done by class
+Block tags are interchangeable since styling is done by class
 ```html
 <!-- All the same -->
 <div class="article">
@@ -48,7 +48,7 @@ Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all
 <article class="article">
 ```
 
-- Html tags that are out of control (eg. the output of an editor) are scoped by the parent
+Html tags that are out of control (eg. the output of an editor) are scoped by the parent
 ```html
 <div class="article has-html">
     <!-- custom html output -->
@@ -172,7 +172,7 @@ class="v-auth__form"
 
 #### .-modifier
 
-`class="button -small"`
+`class="button -rounded"`
 
 ```scss
 .button {
@@ -249,7 +249,7 @@ class="h-text-ellipsis"
     
     @include ...;                   //  @includes first
          
-    a-property: value;              // Props sorted automatically by linter
+    a-property: value;              // Props sorted automatically by csscomb
     b-property: value; 
     c-property: .45em;              // No leading zero's
     
@@ -263,11 +263,9 @@ class="h-text-ellipsis"
     }
     
     &.-modifier {
-      ...                         // Limit props or create variation
+      ...                           // Limit props or create variation
     }
-    
-    // Comment to group modifiers
-    
+     
     &.-modifier2 {
       ...                        
     }
@@ -302,7 +300,7 @@ class="h-text-ellipsis"
 
 ### File structure
 
-We typically use 8 folders and a main app.scss file
+We typically use 8 folders and a main `app.scss` file
 
 ```
 |-- base            : basic html elements
@@ -320,7 +318,7 @@ We typically use 8 folders and a main app.scss file
 ```
 
 
-#### app.scss
+#### App.scss
 
 - Source order shouldn't matter, except for order of folders: import npm libraries, settings and utilities first.
 - Import is done by glob pattern so files can be moved easily from eg. components to patterns:
@@ -337,7 +335,7 @@ We typically use 8 folders and a main app.scss file
 @import 'views/**/*'; 
 ```
 
-#### base folder
+#### Base folder
 
 Contains sensible defaults for basic html elements. Example files and classes:
 
@@ -366,7 +364,7 @@ Example file `*.scss`
 ```
 
 
-#### components folder
+#### Components folder
 
 Stand-alone reusable components with modifiers and variations.
 
@@ -399,7 +397,7 @@ Excerpt from `alert.scss`
 ```
 
 
-#### helpers folder
+#### Helpers folder
 
 Stand-alone reusable components with modifiers and variations.
 
@@ -432,7 +430,7 @@ Excerpt from `margin.scss`
 ```
 
 
-#### patterns folder
+#### Patterns folder
 
 More complex reusable patterns with parent/child relations, modifiers and variations.
 
@@ -466,7 +464,7 @@ Excerpt from `grid.scss`
 }
 ```
 
-#### settings folder
+#### Settings folder
 
 Settings for colors, breakpoints, typography. etc.
 
@@ -493,7 +491,7 @@ $blue: (
 ```
 
 
-#### utility folder
+#### Utility folder
 
 SCSS common mixins and functions.
 
@@ -545,7 +543,7 @@ Excerpt from `mixins/block.scss`
 }
 ```
 
-#### vendor folder
+#### Vendor folder
 
 Imported and customized SCSS from 3rd party components. This is the syntactical wild west.
 
@@ -556,7 +554,7 @@ Imported and customized SCSS from 3rd party components. This is the syntactical 
 
 ```
 
-#### view folder
+#### View folder
 
 Non-reusable CSS rules tied to specific views. Consider this the exception, and try to keep this folder empty. 
 
