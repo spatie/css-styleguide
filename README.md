@@ -65,7 +65,8 @@ We follow a BEVM syntax with custom accents.
 .items                       // Parent block
 .item                        // Child block
 
-.block(__element)--variation // Standalone variation of a block
+.block--variation            // Standalone variation of a block
+.block__element--variation   // Standalone variation of an element
 .v-block                     // Block only used in specific view
 
 .-modifier                   // Single property modifier
