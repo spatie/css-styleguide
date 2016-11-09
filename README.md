@@ -75,13 +75,13 @@ Shorthand if possible:
 
 ```
 
-Class order
+Class order in the DOM:
 
 ```html
 <div class="js-hook block__element -modifier h-helper is-state has-something">
 ```
 
-Visual class grouping can be done with `... | ...`.
+Visual class grouping can be done with `... | ...`:
 
 ```html
 <div class="js-masonry | news__item -blue -small | h-hidden is-active has-html">
@@ -575,7 +575,7 @@ Excerpt from `auth.scss`
 ### Spatie-scss
 
 [Spatie-scss](https://github.com/spatie/spatie-scss) is a small package that is used to kickstart CSS authoring with default settings, mixins, functions etc.
-It lacks the `vendor` and `view` folders, since this is specific to every project.
+It lacks the `vendor` and `view` folders, since these are specific to every project.
 
 ### Code Style
 - Install cscomb globally via `npm i csscomb -g` 
