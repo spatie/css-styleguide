@@ -568,7 +568,7 @@ Excerpt from `auth.scss`:
 }
 
 .v-auth__gravatar{
-  ...
+    ...
 }
 ```
 
