@@ -392,7 +392,7 @@ Excerpt from `alert.scss`:
 
 ### Helpers folder
 
-Stand-alone reusable components with modifiers and variations.
+Stand-alone helper classes for small layout issues.
 
 ```
 |-- align.scss
