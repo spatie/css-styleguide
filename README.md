@@ -574,7 +574,7 @@ Excerpt from `auth.scss`:
 
 ### Spatie-scss
 
-[Spatie-scss](https://github.com/spatie/spatie-scss) is a small package that is used to kickstart CSS authoring with default settings, mixins, functions etc.
+[@spatie/scss](https://github.com/spatie/scss) is a small npm package that is used to kickstart CSS authoring with default settings, mixins, functions etc.
 It lacks the `vendor` and `view` folders, since these are specific to every project.
 
 ### Code Style
