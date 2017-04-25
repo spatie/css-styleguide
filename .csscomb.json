@@ -1,6 +1,7 @@
 {
     "exclude": [
-        "node_modules/**"
+        "node_modules/**",
+        "resources/assets/sass/front/utility/**"
     ],
     "always-semicolon": true,
     "block-indent": "    ",
@@ -23,7 +24,7 @@
     "space-between-declarations": "\n",
     "strip-spaces": true,
     "unitless-zero": true,
-    "vendor-prefix-align": false,
+    "vendor-prefix-align": true,
     "sort-order-fallback": "abc",
     "sort-order": [
         [
@@ -55,19 +56,11 @@
             "flex",
             "flex-align",
             "flex-direction",
-            "-webkit-box-flex",
-            "-ms-flex-positive",
             "flex-grow",
             "flex-order",
-            "-ms-flex-pack",
-            "-webkit-box-pack",
             "flex-pack",
-            "-ms-flex-negative",
             "flex-shrink",
-            "-ms-flex-wrap",
             "flex-wrap",
-            "-webkit-box-align",
-            "-ms-flex-align",
             "align-content",
             "align-items",
             "justify-content",
@@ -150,7 +143,6 @@
             "border-image-width",
             "border-spacing",
             "box-shadow",
-            "filter",
             "opacity",
             "outline",
             "outline-width",
@@ -184,14 +176,6 @@
             "word-wrap"
         ],
         [
-            "counter-increment",
-            "counter-reset",
-            "list-style",
-            "list-style-image",
-            "list-style-position",
-            "list-style-type"
-        ],
-        [
             "animation",
             "animation-delay",
             "animation-direction",
@@ -200,15 +184,23 @@
             "animation-name",
             "animation-play-state",
             "animation-timing-function",
-            "-webkit-transform",
             "transform",
             "transform-origin",
-            "-webkit-transition",
+            "transform-origin-x",
+            "transform-origin-y",
             "transition",
             "transition-delay",
             "transition-duration",
             "transition-property",
             "transition-timing-function"
+        ],
+        [
+            "counter-increment",
+            "counter-reset",
+            "list-style",
+            "list-style-image",
+            "list-style-position",
+            "list-style-type"
         ],
         [
             "cursor",
@@ -226,8 +218,10 @@
         [
             "$include form-placeholder",
             "$include mq",
-            "$include mq-below",
-            "$include mq-above"
+            "$include mq-smaller",
+            "$include mq-wider",
+            "$include mq-taller",
+            "$include mq-higher"
         ]
     ],
     "verbose": true
