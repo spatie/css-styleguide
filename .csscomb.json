@@ -37,7 +37,7 @@
             "$include"
         ],
         [
-            "content"
+            "content",
             "box-sizing",
             "display",
             "flex",
@@ -194,7 +194,7 @@
             "transition-delay",
             "transition-duration",
             "transition-property",
-            "transition-timing-function"
+            "transition-timing-function",
             "cursor",
             "pointer-events",
             "quotes",
