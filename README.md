@@ -12,6 +12,16 @@ Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all
 - [Tools](#tools)
 - [Inspiration](#inspiration)
 
+## Support us
+
+Learn how to create a package like this one, by watching our premium video course:
+
+[![Laravel Package training](https://spatie.be/github/package-training.jpg)](https://laravelpackage.training)
+
+We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+
+We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+
 ## HTML 
 
 - All styling is done by classes
@@ -47,8 +57,6 @@ Html tags that are out of control (eg. the output of an editor) are scoped by th
     <!-- custom html output -->
 </div>    
 ```
-
-
 
 ## CSS classes
 
@@ -150,7 +158,6 @@ class="person"
 - It's used stand-alone without the need to use the base class `button`
 - It's a logical case to use `@extend` here, so the variation can inherit the original modifiers
 
-
 ### .v-block
 
 ```html
@@ -162,8 +169,6 @@ class="v-auth__form"
 - A special component that is not reusable, but tied to a specific view
 - Mostly exceptions and one-time styling
 - Use sparsely, try to think in more generic components
-
-
 
 ### .-modifier
 
@@ -183,7 +188,6 @@ class="v-auth__form"
 - Multiple modifiers are possible. Each modifier is responsible for a property: `class="alert -success -rounded -large"`
 - The order in html or css should therefore not matter
 
-
 ### .h-type-value
 
 `class="h-align-right"`
@@ -199,7 +203,6 @@ class="h-text-ellipsis"
 - Prefixed by type (= the property that will be effected)
 - Each helper class is responsible for a well-defined set of properties
 
-
 ### .is-state
 
 `class="is-loaded"`
@@ -213,7 +216,6 @@ class="h-text-ellipsis"
 - Special kind of modifier
 - Classes added by server or client
 - For state indication, interaction, animation start/stop 
-
 
 ### .has-something
 
@@ -230,9 +232,6 @@ class="h-text-ellipsis"
 - Explicit scoping class indicates special status of this DOM node's tree
 - An exception to the rule "all is class" when content of the node is rendered by a external component
 - Styling is done by nesting in the namespace
-
-
-
 
 ## Scss syntax 
  
@@ -292,7 +291,6 @@ class="h-text-ellipsis"
 
 ```
 
-
 ## File structure
 
 We typically use 8 folders and a main `app.scss` file:
@@ -311,7 +309,6 @@ We typically use 8 folders and a main `app.scss` file:
 `-- app.scss        : main file
 
 ```
-
 
 ### App.scss
 
@@ -358,7 +355,6 @@ Example file `*.scss`:
 }
 ```
 
-
 ### Components folder
 
 Stand-alone reusable components with modifiers and variations.
@@ -388,7 +384,6 @@ Excerpt from `alert.scss`:
 }
 
 ```
-
 
 ### Helpers folder
 
@@ -421,7 +416,6 @@ Excerpt from `margin.scss`:
     ...
 }
 ```
-
 
 ### Patterns folder
 
@@ -482,7 +476,6 @@ $blue: (
     darkest: #00284f,
 );
 ```
-
 
 ### Utility folder
 
@@ -586,4 +579,3 @@ It lacks the `vendor` and `view` folders, since these are specific to every proj
 
 - [CSS Wizardry](https://csswizardry.com) 
 - [Chainable BEM modifiers](https://webuild.envato.com/blog/chainable-bem-modifiers/) 
-
